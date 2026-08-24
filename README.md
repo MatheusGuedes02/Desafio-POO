@@ -1,23 +1,29 @@
-# Classe Tenis
- 
-A classe `Tenis` representa um tênis no mundo real, contendo os seguintes atributos:
- 
-- **modelo**: nome do modelo do tênis
-- **cor**: cor do tênis
-- **tamanho**: representado de forma simplificada por números inteiros
-  - 1 - P
-  - 2 - M
-  - 3 - G
+# Classe Carro
 
- <img width="647" height="264" alt="image" src="https://github.com/user-attachments/assets/3c0684e7-11bd-40f6-8811-94f1b06f6ac5" />
+A classe `Carro` representa um veículo do mundo real no sistema, contendo os seguintes atributos:
 
+* **cor**: representa a cor do carro (ex: "Azul", "Vermelho", "Preto").
+* **peso**: representado por um número decimal (`double`) em quilos (kg).
+* **potencia**: representada por um número inteiro (`int`) em cavalos de potência (cv).
+
+
+
+---
 
 ## Métodos
- 
-### trocarModeloTenis
- 
-Troca o modelo já estabelecido do tênis por uma nova String passada como parâmetro.
- 
-### validarTamanho
- 
-Valida se o tamanho do calçado é bom para o usuário, fazendo comparações entre os inteiros que representam os tamanhos do calçado. O tamanho ideal para o cliente é passado como parâmetro do método.
+
+**mudarPeso**
+
+Altera o peso do veículo recebendo um valor `double` como parâmetro e retornando um `boolean` (`true` para alteração bem-sucedida e `false` para valor inválido).
+
+**alterarPotencia**
+
+Altera a potência do veículo recebendo um número inteiro (`int`) como parâmetro e retornando um `boolean` para indicar se a alteração foi efetuada.
+
+**carroSeguro**
+
+Valida se o peso atual do veículo é seguro comparado ao limite informado por parâmetro (`double`). Retorna um `boolean`.
+
+**validarPotencia**
+
+Verifica se a potência do veículo está dentro da potência máxima informada por parâmetro (`int`). Retorna um `boolean`.
