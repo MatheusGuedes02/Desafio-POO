@@ -6,6 +6,7 @@ A classe `Carro` representa um veículo do mundo real no sistema, contendo os se
 * **peso**: representado por um número decimal (`double`) em quilos (kg).
 * **potencia**: representada por um número inteiro (`int`) em cavalos de potência (cv).
 
+<img width="825" height="585" alt="image" src="https://github.com/user-attachments/assets/1fe40247-b666-48fd-8d7a-826e7774c815" />
 
 
 ---
