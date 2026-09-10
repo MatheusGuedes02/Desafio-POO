@@ -2,11 +2,16 @@ package br.com.fiapride.model;
 
 public class Carro {
 
-    public String cor;
-    public double peso;
-    public int potencia;
+    private String cor;
+    private double peso;
+    private int potencia;
 
-    // Altera o peso garantindo 	que não seja negativo ou zero
+    
+    public Carro(String cor, double peso, int potencia){
+    	this.setCor(cor);
+    	this.setPeso(peso);
+    	this.setPotencia(potencia);
+    }
     public boolean mudarPeso(double novoPeso) {
         if (novoPeso > 0) {
             this.peso = novoPeso;
@@ -17,7 +22,6 @@ public class Carro {
             return false;
         }
     }
-
     // Altera a potência garantindo que não seja negativa
     public boolean alterarPotencia(int novaPotencia) {
         if (novaPotencia >= 0) {
@@ -29,7 +33,6 @@ public class Carro {
             return false;
         }
     }
-
     // Verifica se o peso está dentro do limite seguro
     public boolean carroSeguro(double pesoLimite) {
         if (this.peso <= 0) {
@@ -45,8 +48,7 @@ public class Carro {
             return false;
         }
     }
-
-    // Valida se a potência está dentro do limite máximo permitido
+ // Valida se a potência está dentro do limite máximo permitido
     public boolean validarPotencia(int potenciaMax) {
         if (this.potencia > potenciaMax) {
             System.out.println("O carro ultrapassa o limite de potência da via!");
@@ -56,4 +58,24 @@ public class Carro {
             return true;
         }
     }
+    
+	public String getCor() {
+		return cor;
+	}
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+	public double getPeso() {
+		return peso;
+	}
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
+	public int getPotencia() {
+		return potencia;
+	}
+	public void setPotencia(int potencia) {
+		this.potencia = potencia;
+	}
+    
 }
