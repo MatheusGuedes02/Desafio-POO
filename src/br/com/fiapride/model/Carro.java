@@ -5,12 +5,13 @@ public class Carro {
     private String cor;
     private double peso;
     private int potencia;
-
+    private String modelo;
     
-    public Carro(String cor, double peso, int potencia){
+    public Carro(String cor, double peso, int potencia, String modelo){
     	this.setCor(cor);
     	this.setPeso(peso);
     	this.setPotencia(potencia);
+    	this.setModelo(modelo);
     }
     public boolean mudarPeso(double novoPeso) {
         if (novoPeso > 0) {
@@ -76,6 +77,12 @@ public class Carro {
 	}
 	public void setPotencia(int potencia) {
 		this.potencia = potencia;
+	}
+	public String getModelo() {
+		return modelo;
+	}
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
 	}
     
 }
