@@ -1,18 +1,19 @@
 package br.com.fiapride.model;
 
 public class Carro {
-
     private String cor;
     private double peso;
     private int potencia;
     private String modelo;
-    
-    public Carro(String cor, double peso, int potencia, String modelo){
-    	this.setCor(cor);
-    	this.setPeso(peso);
-    	this.setPotencia(potencia);
-    	this.setModelo(modelo);
+
+    // Construtor sem dependencias de setters publicos
+    public Carro(String cor, double peso, int potencia, String modelo) {
+        this.cor = cor;
+        this.peso = peso;
+        this.potencia = potencia;
+        this.modelo = modelo;
     }
+
     public boolean mudarPeso(double novoPeso) {
         if (novoPeso > 0) {
             this.peso = novoPeso;
@@ -23,7 +24,7 @@ public class Carro {
             return false;
         }
     }
-    // Altera a potência garantindo que não seja negativa
+
     public boolean alterarPotencia(int novaPotencia) {
         if (novaPotencia >= 0) {
             this.potencia = novaPotencia;
@@ -34,7 +35,7 @@ public class Carro {
             return false;
         }
     }
-    // Verifica se o peso está dentro do limite seguro
+
     public boolean carroSeguro(double pesoLimite) {
         if (this.peso <= 0) {
             System.out.println("ALERTA: Carro com peso inconsistente!");
@@ -49,7 +50,7 @@ public class Carro {
             return false;
         }
     }
- // Valida se a potência está dentro do limite máximo permitido
+
     public boolean validarPotencia(int potenciaMax) {
         if (this.potencia > potenciaMax) {
             System.out.println("O carro ultrapassa o limite de potência da via!");
@@ -59,30 +60,21 @@ public class Carro {
             return true;
         }
     }
-    
-	public String getCor() {
-		return cor;
-	}
-	public void setCor(String cor) {
-		this.cor = cor;
-	}
-	public double getPeso() {
-		return peso;
-	}
-	public void setPeso(double peso) {
-		this.peso = peso;
-	}
-	public int getPotencia() {
-		return potencia;
-	}
-	public void setPotencia(int potencia) {
-		this.potencia = potencia;
-	}
-	public String getModelo() {
-		return modelo;
-	}
-	public void setModelo(String modelo) {
-		this.modelo = modelo;
-	}
-    
+
+    // Apenas os Getters continuam públicos
+    public String getCor() {
+        return cor;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public int getPotencia() {
+        return potencia;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
 }

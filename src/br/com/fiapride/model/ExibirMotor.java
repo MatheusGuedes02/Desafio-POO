@@ -4,9 +4,9 @@ public class ExibirMotor {
 	private int cavalos;
 	private String fabricante;
 	private String forma;
-	
 	private Carro veiculo;
 	
+	// Construtor
 	public ExibirMotor(int cavalos, String fabricante, String forma, Carro veiculo) {
 		super();
 		this.cavalos = cavalos;
@@ -16,44 +16,31 @@ public class ExibirMotor {
 		
 		System.out.println("Nova solicitação de motor para o veiculo: " + veiculo.getModelo());
 	}
+	
+	// Mostra dados do motor do carro atual
 	public void resumoMotor() {
-		System.out.println("-----------Resumo do motor do carro: " + this.veiculo + "----------------------");
+		// feat: Usando getModelo() para exibir o nome em vez do hash de memória do objeto
+		System.out.println("\n-----------Resumo do motor do carro: " + this.veiculo.getModelo() + "----------------------");
 		
 		System.out.println("Cavalos do motor: " + this.cavalos);
 		System.out.println("Fabricante do motor: " + this.fabricante);
 		System.out.println("Forma do motor: " + this.forma);
 	}
 	
-	
+	// Apenas os métodos Getters foram mantidos
 	public int getCavalos() {
 		return cavalos;
-	}
-
-	public void setCavalos(int cavalos) {
-		this.cavalos = cavalos;
 	}
 
 	public String getFabricante() {
 		return fabricante;
 	}
 
-	public void setFabricante(String fabricante) {
-		this.fabricante = fabricante;
-	}
-
 	public String getForma() {
 		return forma;
 	}
 
-	public void setForma(String forma) {
-		this.forma = forma;
-	}
-
 	public Carro getVeiculo() {
 		return veiculo;
-	}
-
-	public void setVeiculo(Carro veiculo) {
-		this.veiculo = veiculo;
 	}
 }
